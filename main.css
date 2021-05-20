@@ -1,0 +1,910 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #ffc850;
+}
+
+main {
+    background: linear-gradient(220deg, #008080, transparent), repeating-linear-gradient(-220deg, #002525 10%, #004747 35%);
+    background-attachment: fixed;
+}
+
+
+/******** Nav Bar ********/
+
+#nav-bar {
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    align-items: center;
+    right: 100px;
+    animation: dropDown 1.3s ease-in-out;
+    z-index: 1;
+}
+
+@keyframes dropDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -5%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: flex-end;
+}
+
+li {
+    padding: 10px 30px;
+}
+
+#nav-bar a {
+    font-family: 'Bad Script', cursive;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: white;
+    opacity: .7;
+    text-decoration: none;
+}
+
+#nav-bar a:hover {
+    opacity: .8;
+    font-size: 19px;
+    color: #ffc850;
+    text-shadow: 2px 2px 2px #750075;
+    opacity: 100%;
+}
+
+/*
+.burger-button {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #ffc850;
+    margin: 6px 0;
+    transition: .8s;
+}
+
+.burgerClick .bar1 {
+   
+    transform: skewY(10deg);
+    opacity: .3;
+}
+.burgerClick .bar2 {
+    opacity: 1;
+    transform: skewX(100deg);
+}
+.burgerClick .bar3 {
+    transform: skewy(-10deg);
+    opacity: .3;
+}
+    */
+/******** Welcome Words Page ********/
+
+#welcome-section {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid #ffc850;
+    width: 100vw;
+}
+
+
+/******** Name etc ********/
+.intro-section {
+    position: relative;
+    bottom: 10px;
+}
+
+.intro-section h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+    font-style: italic;
+    letter-spacing: 6px;
+    text-align: center;
+    justify-content: center;
+    color: #ffc850;
+    text-shadow: 2px 2px 2px #750075;
+    opacity: 100%;
+}
+
+.intro-lines {
+    margin-left: 180px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    letter-spacing: 2px;
+    color: #ffc850;
+    text-shadow: 2px 2px 2px #750075;
+    opacity: 95%;
+    line-height: 1.6;
+}
+#s-t {
+    margin-left: 150px;
+}
+#f-e {
+    margin-left: 170px;
+}
+#w-d {
+    margin-left: 190px;
+}
+
+
+/******** Welcome Contact Icon ********/
+.welcome-contact-icons {
+    position: absolute;
+    right: 35px;
+    top: 280px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 250px;
+    width: 50px;
+}
+
+.welcome-contact-icons i {
+    font-size: 45px;
+    margin-bottom: 50px;
+    color: rgb(255, 250, 225);
+    border-radius: 5%;
+
+    animation: icons 1.5s ease-in-out;
+}
+
+@keyframes icons {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -10%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.welcome-contact-icons i:hover {
+    font-size: 46px;
+    color: #ffc850;
+    cursor: pointer;
+}
+
+
+/******** Welcome Text ********/
+.welcome-text  {
+    position: absolute;
+    width: 375px;
+    height: 300px;
+    left: 55px;
+    top: 50px;
+    color: white;
+    opacity: 95%;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.html-text::before {
+    position: absolute;
+    content: '<html>';
+    top: 0px;
+    left: 0px;
+    font-family: 'Bad Script', cursive;
+    animation: fadeIn 1.5s ease-in both;
+    animation-delay: .5s;
+}
+.body-text::before {
+    position: absolute;
+    content: '<body>';
+    top: 20px;
+    left: 10px;
+    font-family: 'Bad Script', cursive;
+    animation: fadeIn 1.5s ease-in both;
+    animation-delay: .8s;
+}
+.main-text::before {
+    position: absolute;
+    content: '<main>';
+    left: 20px;
+    top: 60px;
+    margin-top: -20px;
+    font-family: 'Bad Script', cursive;
+    animation: fadeIn 1.5s ease-in both;
+    animation-delay: 1.1s;
+}
+.main-text p {
+    position: absolute;
+    left: 30px;
+    top: 60px;
+    animation: fadeInMain 1.5s ease-in both;
+    animation-delay: 2.3s;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+}
+.p-text::before {
+    content: '<p>';
+    animation: fadeIn 1.5s ease-in both;
+    animation-delay: 2.3s;
+    font-family: 'Bad Script', cursive;
+}
+.p-text::after{
+    content: '</p>';
+    animation: fadeIn 1.5s ease-in both;
+    animation-delay: 2.3s;
+    font-family: 'Bad Script', cursive;
+}
+.main-text::after {
+    position: absolute;
+    content: '</main>';
+    bottom: -20px;
+    left: 20px;
+    top: 80px;
+    font-family: 'Bad Script', cursive;
+    animation: fadeIn 1.5s ease-in both;
+    animation-delay: 1.4s;
+}
+.body-text::after {
+    position: absolute;
+    content: '</body>';
+    top: 100px;
+    left: 10px;
+    font-family: 'Bad Script', cursive;
+    animation: fadeIn 1.5s ease-in both;
+    animation-delay: 1.7s;
+}
+.html-text::after {
+    position: absolute;
+    content: '</html>';
+    top: 120px;
+    left: 0px;
+    font-family: 'Bad Script', cursive;
+    animation: fadeIn 1.5s ease-in both;
+    animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(0, -20%, 0);
+    }
+    to {
+        opacity: 60%;
+        transform: translate(0, 0, 0);
+    }
+}
+@keyframes fadeInMain {
+    from {
+        opacity: 0;
+        transform: translate(0, -20%, 0);
+    }
+    to {
+        opacity: 95%;
+        transform: translate(0, 0, 0);
+    }
+}
+
+
+
+/******** Project Section ********/
+
+#projects-section {
+    position: relative;
+    min-height: 130vh;
+    border-bottom: 3px solid #ffc850;
+}
+
+#projects-section .page-title {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    top: 50px;
+    left: 75px;
+    font-family: 'Bad Script', cursive;
+    font-size: 35px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    color: #ffc850; 
+    text-shadow: 1px 1px 1px #750075;
+    text-decoration: underline;
+    width: 300px;
+}
+
+
+.all-projects {
+    display: flex;
+    flex-direction: row;
+   justify-content: center;
+    margin-bottom: 50px;
+}
+
+.projects {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 75px;
+    margin-bottom: -80px;   
+    height: 300px;
+    width: 360px;
+    cursor: pointer;
+}
+
+
+.projects p {
+    font-family: 'Poppins', sans-serif;
+    color: #ffc850;
+    margin: 5px;
+}
+.project-title {
+    font-size: 20px;
+}
+.project-language {
+    font-size: 15px;
+}
+
+.project-image-link {
+    position: relative;
+    height: 22vh;
+    width: 20vw;
+    opacity: 90%;
+    border-radius: 3px;
+}
+.project-image-link:hover {
+    border: 1px solid #ffc850;
+    opacity: 100%;
+}
+
+.project-github-link {
+    position: relative;
+    color: rgb(255, 250, 225);
+    border: none;
+    font-size: 3.5vmin;
+}
+.project-github-link:hover {
+    color: #ffc850;
+}
+
+/******** Projects Modals ********/
+
+.project-modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 1;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    margin: auto;
+    padding: 0;
+    width: 75%;
+    height: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5);
+}
+
+.modal-header {
+    height: 10%;
+    background: #008080;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    color: #ffc850;
+    text-shadow: 2px 2px 2px #750075;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+}
+
+
+.close-button {
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    margin: -18px -15px;
+    cursor: pointer;
+}
+
+.project-images {
+    display: flex;
+  /*  background-color: #fce5b4;    */
+    background: repeating-linear-gradient(#fce5b4 50px, #ffc954 54px);
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid white;
+}
+.project-images img {
+    width: 50%;
+    height: 95%;
+    padding: 5px 10px;
+}
+
+.project-info {
+  /*  background-color: #fce5b4;    */
+    background: repeating-linear-gradient(#fce5b4 50px, #ffc954 54px);
+    height: 30%;
+    font-family: 'Poppins', sans-serif;
+    padding: 8px;
+    font-weight: bolder;
+}
+
+
+.modal-footer {
+    height: 10%;
+    background: #008080;
+    color: white;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+}
+.modal-footer a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #ffc850;
+    text-decoration: none;
+    cursor: pointer;
+} 
+.modal-github-link {
+    position: absolute;
+    left: 20%;
+}
+.modal-live-link {
+    position: absolute;
+    right: 20%;
+}
+.modal-footer a:hover {
+    color: #f8d383;
+}
+
+.right-arrow {
+    position: absolute;
+    font-size: 10vmin;
+    left: 102%;
+    top: 45%;
+    color: #f8d383;
+    cursor: pointer;
+}
+.left-arrow {
+    position: absolute;
+    font-size: 10vmin;
+    right: 102%;
+    top: 45%;
+    color: #f8d383;
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+
+
+/******** About Section ********/
+#about-section {
+    min-height: 100vh;
+    display: flex;
+    border-bottom: 3px solid #ffc850;
+}
+#about-section .page-title {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    height: 100px;
+    top: 75px;
+    left: 75px;
+    font-family: 'Bad Script', cursive;
+    font-size: 35px;
+    letter-spacing: 2px;
+    color: #ffc850;
+    text-shadow: 1px 1px 1px #750075;
+    text-decoration: underline;
+}
+.about-me {
+    position: relative;
+    width: 950px;
+    justify-content: center;
+    top: 100px;
+    height: 0;
+    color: white;
+    opacity: 95%;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.about-main-text p {
+    position: absolute;
+    left: 10px;
+    top: 60px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+}
+.about-p-text::before {
+    position: relative;
+    right: 25px;
+    content: '<p>';
+    font-family: 'Bad Script', cursive;
+    opacity: .6;
+}
+.about-p-text::after{
+    position: relative;
+    right: 25px;
+
+    content: '</p>';
+    font-family: 'Bad Script', cursive;
+    opacity: .6;
+}
+#contact-link {
+    color: white;
+    text-shadow: 1px 1px 1px #750075;
+    text-decoration: none;
+}
+#contact-link:hover {
+    color: #ffc850;
+    text-shadow: 2px 2px 2px #750075;
+}
+
+
+
+
+
+/******** Contact Section ********/
+#contact-section {
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+}
+#contact-section .page-title {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    top: 75px;
+    left: 75px;
+    height: 80px;
+    font-family: 'Bad Script', cursive;
+    font-size: 35px;
+    letter-spacing: 2px;
+    color: #ffc850;   
+    text-shadow: 1px 1px 1px #750075;
+    text-decoration: underline;
+}
+#contact {
+    position: relative;
+    width: 750px;
+    height: 100px;
+    left: 300px;
+    top: 180px;
+    color: white;
+    opacity: 95%;
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+}
+.contact-p-text::before {
+    position: relative;
+    right: 25px;
+    content: '<p>';
+    font-family: 'Bad Script', cursive;
+    opacity: .6;
+}
+.contact-p-text::after {
+    position: relative;
+    right: 25px;
+    content: '</p>';
+    font-family: 'Bad Script', cursive;
+    opacity: .6;
+}
+#contact-form {
+    position: relative;
+    height: 200px;
+    width: 520px;
+    top: 350px;
+    right: 400px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #ffc850;   
+    text-shadow: 1px 1px 1px #750075;
+}
+input {
+    width: 180px;
+    height: 20px;
+    background: #afe4e4;
+    border-radius: 4px;
+}
+input:focus {
+    outline: none;
+}
+#name-email {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 4px;
+}
+textarea {
+    width: 510px;
+    background: #afe4e4;
+}
+textarea:focus {
+    outline: none;
+}
+#submit-button {
+    width: 80px;
+    background: #afe4e4;
+    font-family: 'Bad Script', cursive;
+    font-size: 18px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+#submit-button:focus {
+    outline: none;
+}
+#contact-icons {
+    position: relative;
+    top: 80px;
+    left: 25px;
+}
+#contact-icons i {
+    font-size: 45px;
+    margin-right: 50px;
+    color: rgb(255, 250, 225);
+    border-radius: 5%;
+}
+#contact-icons i:hover {
+    font-size: 46px;
+    color: #ffc850;
+}
+
+
+/******** Screen Size ********/
+
+@media only screen and (max-width: 750px) {
+    /******** Nav Bar ********/
+    #nav-bar {
+        left: 10%;
+        right: 10%;
+        top: 1%;
+        margin: auto;
+        position: fixed;
+        width: 75vw;
+        height: 5vh;
+    }
+    li {
+        padding: 20px;
+    }
+    #nav-bar a {
+        font-size: 3vmin;
+    }
+
+    /******** Welcome Text ********/
+    .html-text::before {
+        display: none;
+    }
+    .body-text::before {
+        display: none;
+    }
+    .body-text::after {
+        display: none;
+    }    
+    .html-text::after {
+        display: none;
+    }
+    .main-text::after {
+        font-size: 2.5vmin;
+        top: 80px;
+    }
+    .main-text::before {
+        font-size: 2.5vmin;
+    }
+    .welcome-text {
+        font-size: 3.5vmin;
+        width: 80vw;
+        top: 80px;
+    }
+    .main-text p {
+        font-size: 2.8vmin;
+    }
+
+    /******** Intro Section ********/
+    .intro-section h1 {
+        font-size: 8vmin;
+    }
+    #s-t {
+        margin-left: 100px;
+        font-size: 3.5vmin;
+    }
+    #f-e {
+        margin-left: 130px;
+        font-size: 3.5vmin;
+    }
+    #w-d {
+        margin-left: 150px;
+        font-size: 3.5vmin;
+    }
+
+    /******** Welcome Contact Icons ********/
+    .welcome-contact-icons {
+        top: 75%;
+        left: 32.5%;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .welcome-contact-icons i {
+        padding: 10px;
+        font-size: 8vmin;
+    }
+
+    /******** Projects Section ********/
+    #projects-section {
+        min-height: 230vh;
+    }
+    #projects-section .page-title {
+        width: 30vw;
+        font-size: 5vmin;
+    }
+    .all-projects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0px;
+    }
+    .projects {
+        height: 20vmin;
+        width: 70vmin;
+        margin-bottom: 65px;
+    }
+    
+    .project-title {
+        font-size: 3.5vmin;
+    }
+    .project-language {
+        font-size: 2.5vmin;
+    }
+
+    .project-image-link {
+        height: 30vmin;
+        width: 40vmin;
+    }
+
+    /******** Projects Modals ********/
+    .modal-content {
+        width: 90%;
+    }
+    .modal-header {
+        font-size: 3vmin;
+    }
+    .close-button {
+        font-size: 5vmin;
+    }
+    .project-images {
+        height: 50%;
+        flex-direction: column;
+    }
+    .project-images img {
+        width: 75%;
+        height: 50%;
+        padding: 5px 2px;
+    }
+    .project-info {
+        height: 30%;
+        font-size: 2.5vmin;
+    }
+    .modal-footer a {
+        font-size: 3.5vmin;
+        margin: 1px -20px 0px -20px;
+        width: 120px;
+    }
+
+    .right-arrow {
+        position: absolute;
+        font-size: 10vmin;
+        left: 45%;
+        top: 101%;
+        color: #f8d383;
+        cursor: pointer;
+        transform: rotate(90deg);
+    }
+    .left-arrow {
+        position: absolute;
+        font-size: 10vmin;
+        right: 45%;
+        top: -10%;
+        color: #f8d383;
+        cursor: pointer;
+        transform: rotate(-90deg);
+    }
+
+    /******** About Section ********/
+    #about-section {
+        min-height: 145vh;
+    }
+
+    #about-section .page-title {
+        font-size: 5vmin;
+        display: inline-block;
+        width: 400px;
+    }
+    .about-me {
+        left: -50px;
+        top: 155px;
+        height: 0;
+    }
+    .about-main-text p {
+        font-size: 3vmin;
+    }
+
+
+    /******** Contact Section ********/
+    #contact-section .page-title {
+        font-size: 5vmin;
+    }
+    #contact {
+        font-size: 3vmin;
+        height: 40vmin;
+        left: 0;
+        top: 130px;
+    }
+    #contact p {
+        width: 70vmin;
+    }
+    #contact-form {
+        width: 90vw;
+        right: 75%;
+        top: 320px;
+    }
+    label {
+        font-size: 3.5vmin;
+    }
+    input {
+        width: 30vmin;
+    }
+    textarea {
+        width: 80vmin;
+    }
+    #submit-button {
+        font-size: 3vmin;
+    }
+    #contact-icons {
+        top: 50px;
+    }
+    #contact-icons i {
+        font-size: 9vmin;
+    }
+}
+
+
+
+    
+@media only screen and (max-width: 390px) {
+    .main-text::after {
+        display: none;
+    }
+    .main-text::before {
+        display: none;
+    }
+}

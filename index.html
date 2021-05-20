@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Portfolio</title>
+</head>
+<body>
+<main>
+    <nav id="nav-bar">
+        <ul>
+            <li><a href="#welcome-section">Home</a></li>
+            <li><a href="#projects-section">Projects</a></li>
+            <li><a href="#about-section">About</a></li>
+            <li><a href="#contact-section">Contact</a></li>
+        </ul>
+
+       <div class="burger-button" onclick="burgerClick(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </nav>
+    
+    <section id="welcome-section">
+        <div class="welcome-text">
+            <div class="html-text"></div>
+            <div class="body-text"></div>
+            <div class="main-text">
+                <p><span class="p-text"> &nbsp; Welcome to my Portfolio &nbsp; </p>
+            </div>
+        </div>
+    
+        <div class="welcome-contact-icons">
+            <a href="https://github.com/OliverPSmith"><i class="fa fa-github"></i></a>
+            <a href="https://codepen.io/oliverpsmith"><i class="fa fa-codepen"></i></a>
+            <a href="https://www.linkedin.com/in/oliver-smith-a17014209/"><i class="fa fa-linkedin"></i></a>
+        </div>
+    
+        <div class="intro-section">
+            <h1>Oliver.P.Smith</h1>
+            <p class="intro-lines" id="s-t">~ Self-taught</p>
+            <p class="intro-lines" id="f-e">~ Front-end</p>
+            <p class="intro-lines" id="w-d">~ Web-Developer</p>
+        </div>
+    </section>
+
+    <section id="projects-section">
+        <h2 class="page-title">Projects</h2>
+        
+        <div class="all-projects">
+
+            <div class="projects">
+                <p class="project-title">Barbers Booking</p>
+                <a class="project-image-link" id="barbers-project-image"><img class="project-image-link" src="images/barbers-booking-before.png"></a>
+                <p class="project-language">HTML ~ CSS ~ Javascript</p>
+                <a class="project-github-link" href="https://github.com/OliverPSmith/Barbers-Booking"><i class="fa fa-github"></i></a>
+            </div>
+            <div class="project-modal" id="barbers-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close-button" id="close-barbers">&times;</span>
+                        <h2>Barbers Booking System</h2>
+                    </div>
+                    <div class="project-images">
+                        <img src="images/barbers-booking-before.png">
+                        <img src="images/barbers-booking-after.png">
+                    </div>
+                    <div class="project-info">
+                        <p>
+                            A barbers booking system.<br>
+                            Select different cut choices, on different days and time slots, with an order confirmation 
+                            coming upp the end. <br>
+                            Suited for both web use and Mobile devices. <br>
+                            With haidressers and barbers being shut throughout Lockdown, my motivation for making 
+                            this project was wishful thinking and an out of control head of hair. <br>
+                        </p>
+                    </div>
+                    <div class="right-arrow" id="barber-right-arrow">
+                        &#10153;
+                    </div>
+                    <div class="left-arrow" id="barber-left-arrow">
+                        &#10153;
+                    </div>
+                    <div class="modal-footer">
+                        <a class="modal-github-link" href="https://github.com/OliverPSmith/Barber-Booking-System">Link to Github</a>
+                        <a class="modal-live-link" href="https://barbers-booking.netlify.app/">Link to Live Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects">
+                <p class="project-title">Weather App</p>
+                <a class="project-image-link" id="weather-app-project-image"><img class="project-image-link" src="images/weather-app-image.png"></a>
+                <p class="project-language">HTML ~ CSS ~ Javascript ~ FETCH API</p>
+                <a class="project-github-link" href="https://github.com/OliverPSmith/Weather-App-w-API"><i class="fa fa-github"></i></a>
+            </div>
+            <div class="project-modal" id="weather-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close-button" id="close-weather">&times;</span>
+                        <h2>Weather App</h2>
+                    </div>
+                    <div class="project-images">
+                        <img src="images/weather-app-before-image.png">
+                        <img src="images/weather-app-after-image.png">
+                    </div>
+                    <div class="project-info">
+                        <p>
+                            A worldwide weather app. <br>
+                            Get the current weather of any city in the world. <br>
+                            Javascript + 'Fetch API' + my own photography have brought this project to life. <br>
+                            Straightforward and easy to use, with clear code and aesthetic design. <br>
+                            Unfortunately, Netlify does not support the use of the API, so to see the 
+                            before and end result please refer to the images above.
+                        </p>
+                    </div>
+                    <div class="right-arrow" id="weather-right-arrow">
+                        &#10153;
+                    </div>
+                    <div class="left-arrow" id="weather-left-arrow">
+                        &#10153;
+                    </div>
+                    <div class="modal-footer">
+                        <a class="modal-github-link" href="https://github.com/OliverPSmith/Weather-App-w-API">Link to Github</a>
+                        <a class="modal-live-link" href="https://weather-app-with-api.netlify.app/">Link to Live Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects">
+                <p class="project-title">Rock, Paper, Scissors</p>
+                <a class="project-image-link" id="r-p-s-project-image"><img class="project-image-link" src="images/RPS-BEFORE.png"></a>
+                <p class="project-language">HTML ~ CSS ~ Javascript</p>
+                <a class="project-github-link" href="https://github.com/OliverPSmith/Rock-Paper-Scissors"><i class="fa fa-github"></i></a>
+            </div>
+            <div class="project-modal" id="r-p-s-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close-button" id="close-r-p-s">&times;</span>
+                        <h2>Rock, Paper, Scissors</h2>
+                    </div>
+                    <div class="project-images">
+                        <img src="images/RPS-BEFORE.png">
+                        <img src="images/RPS-AFTER.png">
+                    </div>
+                    <div class="project-info">
+                        <p>
+                            Everyones favourite negotiation game. <br>
+                            The Computer, a most formidable opponent, selets at random while the User
+                            selects out of the three options. <br>
+                            The hands change to suit which seletion you have made.<br>
+                            The Score updates after every go.<br>
+                            HTML, CSS, and Javascript have brought a playground classic to your computers
+                            and phones. <br>
+                            Try your hand via the link below.
+                        </p>
+                    </div>
+                    <div class="right-arrow" id="r-p-s-right-arrow">
+                        &#10153;
+                    </div>
+                    <div class="left-arrow" id="r-p-s-left-arrow">
+                        &#10153;
+                    </div>
+                    <div class="modal-footer">
+                        <a class="modal-github-link" href="https://github.com/OliverPSmith/Rock-Paper-Scissors">Link to Github</a>
+                        <a class="modal-live-link" href="https://rock-paper-scissors-javascript.netlify.app/">Link to Live Site</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="all-projects">
+
+            <div class="projects">
+                <p class="project-title">Roman Numerals Converter</p>
+                <a class="project-image-link" id="numerals-project-image"><img class="project-image-link" src="images/numerals-image.png"></a>
+                <p class="project-language">HTML ~ CSS ~ Javascript</p>
+                <a class="project-github-link" href="https://numbers-numerals-converter.netlify.app/"><i class="fa fa-github"></i></a>
+            </div>
+            <div class="project-modal" id="numerals-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close-button" id="close-numerals">&times;</span>
+                        <h2>Roman Numerals Converter</h2>
+                    </div>
+                    <div class="project-images">
+                        <img src="images/numerals-image.png">
+                        <img src="images/numerals-image-after.png">
+                    </div>
+                    <div class="project-info">
+                        <p>
+                            Quite simply, a site that converts Numbers into Roman Numerals.<br> A simple
+                            project. <br> With a simple design. <br> Written with clear and concise code. <br>
+                            Check it out via the 'Link to Live Site' below.
+                        </p>
+                    </div>
+                    <div class="right-arrow" id="numerals-right-arrow">
+                        &#10153;
+                    </div>
+                    <div class="left-arrow" id="numerals-left-arrow">
+                        &#10153;
+                    </div>
+                    <div class="modal-footer">
+                        <a class="modal-github-link" href="https://github.com/OliverPSmith/Number-to-Numerals">Link to Github</a>
+                        <a class="modal-live-link" href="https://numbers-numerals-converter.netlify.app/">Link to Live Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects">
+                <p class="project-title">Password Checker</p>
+                <a class="project-image-link" id="password-project-image"><img class="project-image-link" src="images/password-image.png"></a>
+                <p class="project-language">HTML ~ CSS ~ Javascript</p>
+                <a class="project-github-link" href="https://github.com/OliverPSmith/Password-Strength-Checker"><i class="fa fa-github"></i></a>
+            </div>
+            <div class="project-modal" id="password-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close-button" id="close-password">&times;</span>
+                        <h2>Password Checker</h2>
+                    </div>
+                    <div class="project-images">
+                        <img src="images/password-image.png">
+                        <img src="images/password-image-after.png">
+                    </div>
+                    <div class="project-info">
+                        <p>
+                            A password checker that has certain strenght requirements, the abilitiy
+                            to hide or display the password as you type it, and a progress bar with 
+                            instructions. <br>
+                            Made with clear code using Javascript, check out the code or site itself
+                            via the links below.
+                        </p>
+                    </div>
+                    <div class="right-arrow" id="password-right-arrow">
+                        &#10153;
+                    </div>
+                    <div class="left-arrow" id="password-left-arrow">
+                        &#10153;
+                    </div>
+                    <div class="modal-footer">
+                        <a class="modal-github-link" href="https://github.com/OliverPSmith/Password-Strength-Checker">Link to Github</a>
+                        <a class="modal-live-link" href="https://password-checker-javascript.netlify.app/">Link to Live Site</a>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="projects">
+                <p class="project-title">Recipe Upload</p>
+                <a class="project-image-link" id="recipe-project-image"><img class="project-image-link" src="images/recipe-image.png"></a>
+                <p class="project-language">HTML ~ CSS ~ Javascript</p>
+                <a class="project-github-link" href="https://github.com/OliverPSmith/Recipe-Page"><i class="fa fa-github"></i></a>
+            </div>
+            <div class="project-modal" id="recipe-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close-button" id="close-recipe">&times;</span>
+                        <h2>Recipe Upload</h2>
+                    </div>
+                    <div class="project-images">
+                        <img src="images/recipe-image.png">
+                        <img src="images/recipe-image-after.png">
+                    </div>
+                    <div class="project-info">
+                        <p>
+                            This is a web page for searching and uploading your own recipes, 
+                            it is one of my earlier portfolio projects where I have incorporated 
+                            quite a few features into it. 
+                        </p>
+                        <p>
+                            The features allow you to; add, search, save, and 'like', new
+                            and existing recipes. 
+                        </p>
+                        <p>
+                            As mentioned above, this is one of my earlier projects, and I think you can see
+                            the progression between this and my latest ones, particularly when considering
+                            the css. However I do believe it also shows good use of Javascript at the very least. 
+                        </p>
+                    </div>
+                    <div class="right-arrow" id="recipe-right-arrow">
+                        &#10153;
+                    </div>
+                    <div class="left-arrow" id="recipe-left-arrow">
+                        &#10153;
+                    </div>
+                    <div class="modal-footer">
+                        <a class="modal-github-link" href="https://github.com/OliverPSmith/Recipe-Page">Link to Github</a>
+                        <a class="modal-live-link" href="https://recipe-page-javascript.netlify.app/">Link to Live Site</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about-section">
+        <h2 class="page-title">A little bit about me</h2>
+        <div class="about-me">
+            <div class="about-main-text">
+                <p><span class="about-p-text"> &nbsp; <br>Hi. <br>
+                    My name is Oliver.<br>
+                    And thanks for checking out my Portfolio. I am a self-taught 
+                    web developer based in London / Surrey. Focused mainly on the front-end side 
+                    of things, where I feel my developement has come a long way, and I now feel that I
+                    excel at making user friendly projects with easy on the eye aesthetics. <br><br>
+                    The languages and skills demonstrated in the projects and portfolio are mainly HTML, CSS, and 
+                    Javascript. However I am currently spending time learning the React framework, amongst other things,
+                    to be more versed and rounded in the web development world and industry. <br><br>
+                    I am currently working in the retail industry, but since getting started with learning the programming languages
+                    mentioned above, I can honestly say I have never found an industry or career path that I am more passionate
+                    or driven to being succesful within. The pleasure of seeing your projects come to life, working and functioning
+                    properly, and looking good while doing so (with each project's CSS and styling looking better than the last), is an
+                    unparelled feeling. One of which I'm sure developers all over the world share. <br><br>
+                    If you would like to find out more then please continue on down to the <a id="contact-link" href="#contact-section">Contact Page</a>, 
+                    where you can also find links to my LinkedIn, Github, and CodePen. &nbsp; <br></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-section">
+        <h2 class="page-title">Contact</h2>
+        <div id="contact">
+            <p><span class="contact-p-text"> &nbsp; <br>Thank you for taking the time to look at my portfolio and projects<br>
+            If you would like to get in contact or would like to request my C.V then 
+                please email me via the form below or follow the link to my LinkedIn Profile &nbsp; <br>
+        </div>
+    
+        <form id="contact-form" action="mailto:oliver_smith@hotmail.co.uk" method="po">
+            <div id="name-email">
+                <div id="name">
+                    <label id="name-label">Name:</label>
+                    <input type="text" id="name-input" required>
+                </div>
+                <div id="email">
+                    <label id="email-label">Email:</label>
+                    <input type="email" id="email-input" required>
+                </div>
+            </div>
+            <div id="text-area">
+                <textarea placeholder="Get in contact here" rows="7" cols="50"></textarea>
+            </div>
+            <button type="submit" id="submit-button" value="send">Send</button>
+            <div id="contact-icons">
+                <a href="https://github.com/OliverPSmith"><i class="fa fa-github"></i></a>
+                <a href="https://codepen.io/oliverpsmith"><i class="fa fa-codepen"></i></a>
+                <a href="https://www.linkedin.com/in/oliver-smith-a17014209/"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </form>
+    </section>
+
+</main>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
